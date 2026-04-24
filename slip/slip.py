@@ -53,3 +53,7 @@ while True:
         print(f"   ✅ Added: {item_name} x{item_qty} = ${item_price * int(item_qty):.2f}")
     except ValueError:
         print("   ❌ Invalid price! Please enter a number.")
+        subtotal = sum(item['total'] for item in items)
+        tax_rate = 0.10
+        tax_amount = subtotal * tax_rate
+        total_amount = subtotal + tax_amount
